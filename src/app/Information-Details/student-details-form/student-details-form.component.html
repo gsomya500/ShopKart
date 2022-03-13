@@ -1,0 +1,23 @@
+<div>
+    <h2>Student Details</h2>
+    <div *ngFor="let ele of data | keyvalue">
+        <div *ngIf="ele.key!='Gender' && ele.key!='Date of Birth'">
+            <label for="">{{ele.key}}</label>
+            <input type="text" [placeholder]="ele.value" [(ngModel)]="ele.value">
+        </div>
+        <div *ngIf="ele.key=='Gender'">
+            <label for="">{{ele.key}}</label>
+        
+               <span *ngFor="let el of data.Gender | keyvalue">
+                <label for="">{{el.key}}</label>
+                <input [value]="el.key" type="radio" [(ngModel)]="el.value">
+               </span> 
+           
+        </div>
+        <div *ngIf="ele.key=='Date of Birth'">
+            <label for="">{{ele.key}}</label>
+            <input [value]="ele.key" type="date" [(ngModel)]="ele.value">
+        </div>
+    </div>
+    <button>Submit</button>
+</div>
