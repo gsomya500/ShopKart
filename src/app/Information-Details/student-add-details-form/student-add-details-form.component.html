@@ -1,0 +1,8 @@
+<div>
+    <h2>Student Address Information</h2>
+    <div *ngFor="let ele of studentAddress | keyvalue">
+        <label for="">{{ele.key}}</label>
+        <input type="text" [placeholder]="ele.value" [(ngModel)]="ele.value" (keyup)="StudentAddFun($event, ele.value, ele.key)">
+    </div>
+    <button>Submit</button>
+</div>

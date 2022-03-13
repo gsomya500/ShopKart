@@ -1,0 +1,11 @@
+
+    {
+        "Name":"Enter Student Name",
+        "Email":" Enter Email",
+        "Mobile":"Enter MobileNo.",
+        "Date of Birth": "",
+        "Gender":{
+            "Male": false,
+            "female": false
+        }
+    }
